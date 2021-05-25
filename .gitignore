@@ -1,4 +1,3 @@
 # Files
-*.csv
 scripts/connect.php
-foodData/venv/*
+foodData/venv/
