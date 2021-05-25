@@ -1,0 +1,196 @@
+<html>
+<head>
+<title>Irish Fitness Development Plan</title>
+<link rel="stylesheet" href="./assets/css/devplan.css">
+<link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico" /> 
+</head>
+<body>
+<div class="sidenav">
+	<a><strong>Contents</strong></a>
+	<a>Schema</a>
+	<a>Choices</a>
+	<a>Data Sources</a>
+	<a>Labor</a>
+	<a>Timeline</a>
+	<a>Demo URL</a>
+	<a><strong>Links</strong></a>
+	<a href="project.html" class="link">Project Page</a>
+	<a href="index.html" class="link">Home Page</a>
+</div>
+<div class="main">
+	<h1>Irish Fitness Development Plan | CSE 30246</h1>
+
+	<h2>Relational Schema</h2>
+	<p><strong>USERS</strong></p>
+	<p><strong>user</strong>(<u>user_id</u>, username, password_hash, first_name, last_name, created_at, height_feet, height_inches, weight, goal, residence, initial_weight, goal_cals, goal_protein, goal_carbs, goal_fat, goal_burned, gender)</p>
+	<p>Dependencies: {user_id: everything}</p>
+	<br>
+	<p><strong>WORKOUTS</strong></p>
+	<p><strong>workout</strong>(<u>workout_id</u>, workout_name, created_by_user)</p>
+	<p>Dependencies: {workout_id: created_by_user}</p>
+	<p><strong>tracked_workout</strong>(<u>tracked_workout_id</u>, created_by_user, calories_burned, workout_type, workout_name, workout_date)</p>
+	<p>Dependencies: {tracked_workout_id: created_by_user, calories_burned, workout_type, workout_date)</p>
+	<p><strong>exercise</strong>(<u>exercise_name</u>, equipment_name, target_muscle, demo_link)</p>
+	<p>Dependencies: {exercise_name: everything}</p>
+	<p><strong>workout_comprised_of</strong>(<u>workout_id</u>, <u>exercise_name</u>, workout_order, sets, reps)</p>
+	<p>Dependencies: {workout_id, exercise_name: workout_order, sets, reps}</p>
+	<p><strong>exercise_location</strong>(<u>exercise_location_name</u>, location_type)</p>
+	<p>Dependencies: {exercise_location_name: location_type}</p>
+	<p><strong>exercise_equipment</strong>(<u>equipment_name</u>)</p>
+	<p>Dependencies: none</p>
+	<p><strong>equipment_available_at</strong>(<u>exercise_location_name</u>, <u>equipment_name</u>)</p>
+	<p>Dependencies: none</p>
+	<br>
+	<p><strong>MEALS</strong></p>
+	<p><strong>meal</strong>(<u>meal_id</u>, user_id, meal_name, meal_date, meal_type, meal_time)</p>
+	<p>Dependencies: {meal_id: everything}</p>
+	<p><strong>meal_item</strong>(<u>food_id</u>, <u>meal_id</u>, servings)<p>
+	<p>Dependencies: {food_id, meal_id: servings}</p>
+	<p><strong>food_item</strong>(<u>food_id</u>, food_name, calories, protein, carbs, fat, sugar, food_group, sourced_from, meal_time, is_offered, serving_size)</p>
+	<p>Dependencies: {food_id: everything}</p>
+
+	<h2>Database and Software Choices</h2>
+	<p><strong>db.cse.nd.edu Server:</strong> Setting up a new server is redundant. Also, this is free!<p>
+	<p><strong>PHP:</strong> We are comfortable with this language from this class and past projects. No need to learn a new language.<p>
+	<p><strong>Python:</strong> Easy to run as a cronjob in order to scrape data daily.<p>
+
+	<h2>Data Sources</h2>
+	<p><strong>Menu and Dining Data:</strong> Campus Dining Menus (dining.nd.edu)</p>
+	<p><strong>Exercise Equipment Data:</strong> RecSports Contact</p>
+	<p><strong>User Data:</strong> Users create their own accounts and input their own data. We will create sample users to test the software and functions.</p>
+	<p><strong>Exercise Data:</strong> Exercise data was obtained from our own brainstorming as well as these sources:</p>
+	<p>&emsp;<a href="https://www.healthline.com/health/fitness-exercise/10-best-exercises-everyday#start-here">healthline.com</a></p>
+	<p>&emsp;<a href="https://www.self.com/gallery/beginner-kettlebell-moves">self.com</a></p>
+	<p>&emsp;<a href="https://www.medicalnewstoday.com/articles/cardio-exercises-at-home">medicalnewstoday.com</a></p>
+	<h2>Labor Division</h2>
+	<table class="std-table">
+		<tr>
+			<th>Area</th>
+			<th>Description</th>
+			<th>Lead</th>
+		</tr>
+		<tr>
+			<td>HTML/CSS</td>
+			<td>Design and development of front end webpages.</td>
+			<td>Stuart Hayden</td>
+		</tr>
+		<tr>
+			<td>Data Collection</td>
+			<td>Acquire data from scraping campus dining and other sources as needed</td>
+			<td>Jake Hracho</td>
+		</tr>
+		<tr>
+			<td>Data Processing</td>
+			<td>Add non-duplicate scraped data to database and dynamically display data based on user input</td>
+			<td>Chris Hunt</td>
+		</tr>
+		<tr>
+			<td>PHP-Lead and Communications Liaison</td>
+			<td>Take point on PHP code and serve as a point-of-contact for Campus Dining and RecSports</td>
+			<td>Julia Buckley</td>
+		</tr>
+	</table>
+	<h3>Running Contributions</h3>
+	<table class="std-table">
+		<tr>
+			<th>Description of Contribution</th>
+			<th>Group Member (Bold Name = Lead)</th>
+			<th>Member NetID</th>
+			<th>Milestone Number</th>
+		</tr>
+		<tr>
+			<td>Sitewide HTML and CSS</td>
+			<td><strong>Stuart Hayden</strong></td>
+			<td>shayden2</td>
+			<td>All</td>
+		</tr>
+		<tr>
+			<td>project.html</td>
+			<td><strong>Stuart Hayden</strong></td>
+			<td>shayden2</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>ER Diagram</td>
+			<td><strong>Julia Buckley</strong>, <strong>Jake Hracho</strong>, Stuart Hayden, Chris Hunt</td>
+			<td>jbuckle2, jhracho, shayden2, chunt4</td>
+			<td>1</td>
+		</tr>
+		<tr>
+			<td>Log In/Sign Up System</td>
+			<td><strong>Jake Hracho</strong></td>
+			<td>jhracho</td>
+			<td>4</td>
+		</tr>
+		<tr>
+			<td>Contact for Rec Sports and Campus Dining</td>
+			<td>Julia Buckley</td>
+			<td>jbuckle2</td>
+			<td>All</td>
+		</tr>
+		<tr>
+			<td>Selenium Web Scraper</td>
+			<td><strong>Julia Buckley</strong>, <strong>Jake Hracho</strong></td>
+			<td>jbuckle2, jhracho</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>Campus Dining DB Update Script</td>
+			<td><strong>Chris Hunt</strong></td>
+			<td>chunt4</td>
+			<td>3</td>
+		</tr>
+		<tr>
+			<td>Profile Update Page</td>
+			<td><strong>Julia Buckley</strong></td>
+			<td>jbuckle2</td>
+			<td>All</td>
+		</tr>
+		<tr>
+			<td>Meal Page</td>
+			<td><strong>Jake Hracho</strong>, Julia Buckley, Stuart Hayden</td>
+			<td>jhracho, jbuckle2, shayden2</td>
+			<td>All</td>
+		</tr>
+		<tr>
+			<td>Workout Page</td>
+			<td><strong>Stuart Hayden</strong>, Jake Hracho, Julia Buckley</td>
+			<td>shayden2, jhracho, jbuckle2</td>
+			<td>All</td>
+		</tr>
+		<tr>
+			<td>Running Routes (On Workout Page)</td>
+			<td><strong>Chris Hunt</strong></td>
+			<td>chunt4</td>
+			<td>4</td>
+		</tr>
+
+	</table>
+
+	<h2>Project Timeline with Milestones</h2>
+	<h3>Milestone 1: Complete</h3>
+	<p>Documentation of project description and goals as well as basic and advanced functionality descriptions.</p>
+	<h3>Milestone 2: Complete</h3>
+	<p>Final ER Diagram draft</p>
+	<h3>Milestone 3: Complete</h3>
+	<p>Outline of database choices and schema, creation of labor division table, project timeline overview, and demo url link</p>
+	<h3>Milestone 4: Complete</h3>
+	<p>Goal: March 19, 2021</p>
+	<p>Creation of Irish Fitness Home Page as well as login and sign up pages</p>
+	<h3>Milestone 5: Complete</h3>
+	<p>Goal: March 26, 2021</p>
+	<p>Creation of databases to hold menu items, users, workouts, etc</p>
+	<h3>Milestone 6: Complete</h3>
+	<p>Goal: April 23, 2021</p>
+	<p>Creation of misc webpages to supplement website and implementation of databases to store relevant information</p>
+	<h3>Milestone 7: Complete</h3>
+	<p>Goal: April 23, 2021</p>
+	<p>Design and implementation of advanced function of route running paths throughout campus</p>
+	<h3>Milestone 8: Complete</h3>
+	<p>Goal: May 7, 2021</p>
+	<p>General debugging and various project tasks</p>
+
+	<h2>Demo URL: <a href="https://youtu.be/57bdMDGYogM" target="_blank">Link</a></h2>
+</div>
+</body>
+</html>

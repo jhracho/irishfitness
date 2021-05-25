@@ -1,0 +1,77 @@
+.container {
+	position: absolute;
+	width: 30%;
+	background-color: #ffffff;
+	top: 5%;
+	left: 35%;
+	text-align: center;
+	border: 3px solid #0c2340;
+	border-radius: 12px;
+}
+
+img {
+	margin-top: 6px;
+	height: 48px;
+}
+
+.input-form {
+	padding: 12px 20px;
+}
+
+input {
+	margin: 8px 0;
+	width: 75%;
+	height: 40px;
+	border: 1px solid #0c2340;
+	border-radius: 6px;
+}
+
+input:focus {
+	border: 2px solid #0c2340;
+}
+
+.column {
+	width: 48%;
+	float: left;
+}
+
+select {
+	margin: 8px 0;
+	width: 75%;
+	height: 40px;
+	border: 1px solid #0c2340;
+	border-radius: 6px;
+}
+
+select:focus {
+	border: 2px solid #0c2340;
+}
+
+.signup-button {
+	width: 75%;
+	height: 40px;
+	margin: 8px 0;
+	border-radius: 6px;
+	background-color: #0c2340;
+	color: #c99700;
+}
+
+.signup-button:hover {
+	background-color: #1c84d9;
+	cursor: pointer;
+}
+
+h3 {
+	text-align: center;
+	color: #0c2340;
+}
+
+a {
+	color: #0c2340;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+a:hover {
+	text-decoration: underline;
+}

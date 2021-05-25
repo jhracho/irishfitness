@@ -1,0 +1,314 @@
+body {
+	background-color: #e6e6e6;
+	margin: 0;
+}
+
+.top-banner {
+	background-color: #0c2340;
+	padding: 0 10%;
+	overflow: hidden;
+	font-family: Garamond, serif !important;
+}
+
+.top-banner h3 {
+	height: 5%;
+	margin: 0;
+	color: #c99700;
+	float: left;
+	font-size: 24px;
+	padding-top: 12px;
+	margin-left: 16px;
+}
+
+.top-banner h4 {
+	margin: 0;
+	color: #c99700;
+	float: right;
+	font-size: 24px;
+	padding-top: 12px;
+}
+
+.topnav {
+	background-color: #c99700;
+	height: 64px;
+	padding: 0 10%;
+	overflow: hidden;
+}
+
+.topnav h3 {
+	float: left;
+}
+
+.topnav h4 {
+	float: right;
+	margin-left: 16px;
+}
+
+.topnav a {
+	color: #0c2340;
+	text-align: center;
+	padding: 14px 16px;
+	font-size: 24px;
+}
+
+.topnav a:hover {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+.inactive {
+	text-decoration: none;
+}
+
+.active {
+	text-decoration: underline;
+}
+
+.top-container {
+	overflow: auto;
+	background-color: #0c2340;
+	margin: 10px;
+	padding-bottom: 24px;
+}
+
+.top-container h1 {
+	margin: 0;
+	padding-top: 24px;
+	font-size: 48px;
+	color: #c99700;
+}
+
+.top-container h2{
+	text-align: center;
+	font-size: 32px;
+	color: #c99700;
+}
+
+.top-container h3 {
+	padding-top: 12px;
+	font-size: 24px;
+	color: #c99700;
+	padding-left: 12px;
+	margin: 0;
+}
+
+.top-container h4 {
+	text-align: center;
+	padding-top: 12px;
+	font-size: 16px;
+	color: white;
+}
+
+.top-container h5 {
+	color: white;
+	text-align: center;
+}
+
+.top-container h5 a {
+	color: #c99700;
+}
+
+.top-container h5 a:hover {
+	color: white;
+}
+
+.top-container button {
+	margin-left: 12px;
+}
+
+.top-container span {
+	font-family: Tahoma, sans-serif;
+}
+
+.header-container {
+	width: 70%;
+	float: right;
+	height: 144px;
+}
+
+.header-container h2 {
+	//text-align: right;
+	//width: 40%;
+	//margin-left: 43%;
+}
+
+.header-container .left {
+	width: 51.5%;
+	float: left;
+}
+
+.left-button {
+	height: 24px;
+	float: right;
+	margin-top: 36px;
+	margin-right: 12px;
+	background-color: #c99700;
+}
+
+.left p {
+	height: 24px;
+	float: left;
+	margin-top: 36px;
+	margin-right: 12px;
+}
+
+.header-container .middle {
+	width: 40%;
+	float: left;
+}
+
+.header-container .right {
+	width: 8.5%;
+	float: left;
+}
+
+.right-button {
+	height: 24px;
+	margin-top: 36px;
+	background-color: #c99700;
+}
+
+.message-container {
+	width: 30%;
+	float: right;
+	height: 100px;
+}
+
+.message-container h5 {
+	padding-right: 8px;
+	margin-bottom: 8px;
+}
+
+.blue-divider {
+	background-color: #0c2340;
+	height: 80px;
+	width: 95%;
+	margin: auto;
+	text-align: center;
+}
+
+.blue-divider-text {
+	float: left;
+	width: 50%;
+	height: 80px;
+	text-align: center;
+}
+
+.blue-divider-text h3 {
+	color: #c99700;
+	margin: 20 0 0 0;
+	font-size: 30px;
+}
+
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+.modal-content {
+	background-color: #e6e6e6;
+	margin: 15% auto;
+	padding: 20px;
+	border: 1px solid #c99700;
+	width: 80%;
+	position: relative;
+	animation: animatetop 0.5s;
+}
+@keyframes animatetop {
+	from {
+		top: -300px;
+		opacity: 0;
+	} to {
+		top: 0;
+		opacity: 1;
+	}
+}
+
+.close {
+	color: #aaa;
+	float: right;
+	font-size: 28px;
+	font-weight: bold;
+	margin-top: 12px;
+}
+
+.close:hover, .close:focus {
+	color: black;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.modal-header {
+	padding: 2px 16px;
+	background-color: #c99700;
+	color: #0c2340;
+	font-size: 24px;
+	overflow: auto;
+}
+
+.modal-header h4 {
+	font-size: 32px;
+	width: 80%;
+	float: left;
+}
+
+.modal-header span {
+	width: 20%;
+}
+
+.modal-body {
+	margin-top: 12px;
+	padding: 2px 16px;
+}
+
+.modal-body button {
+	margin-top: 12px;
+}
+
+table {
+	margin-top: 16px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	border-collapse: collapse;
+}
+
+th {
+	border: 1px solid black;
+	height: 48px;
+	background-color: #c99700;
+	color: #0c2340;
+}
+
+td {
+	border: 1px solid black;
+	text-align: center;
+}
+
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+}
+
+tr:nth-child(odd) {
+	background-color: #e6e6e6;
+}
+
+table a {
+	text-decoration: none;
+}
+
+button {
+	border: 1px solid #0c2340;
+	border-radius: 3px;
+}
+
+hr {
+	margin-top: 24px;
+}

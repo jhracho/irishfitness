@@ -1,0 +1,51 @@
+<html>
+<head>
+<title>Irish Fitness Project Documentation</title>
+<link rel="stylesheet" href="./assets/css/project.css">
+<link rel="shortcut icon" type="image/x-icon" href="assets/icons/favicon.ico" /> 
+</head>
+<body>
+<div class="sidenav">
+	<a><strong>Contents</strong></a>
+	<a>Description</a>
+	<a>Usefulness</a>
+	<a>Realness</a>
+	<a>Functions</a>
+	<a>ER Diagram</a>
+	<a><strong>Links</strong></a>
+	<a href="devplan.html" class="link">Dev Plan</a>
+	<a href="index.html"class="link">Home Page</a>
+</div>
+
+<div class="main">
+	<h1>Irish Fitness Project Documentation | CSE 30246</h1>
+	<h2>Project Description</h2>
+	<p>Irish Fitness is a web application that will eventually (hopefully) transform into an iOS and Android app as well.</p>
+	<p>The goal of Irish Fitness is to allow users to build healthy and nutritious meals using Campus Dining menus. These menus, including North and South Dining Halls and flex point options, will be parsed from dining.nd.edu.</p>
+	<p>Users will also be able to build a workout plan based on exercise equipment available to them in places such as Duncan, The Rock, or their dorm gym. There will be a list of example exercises that the user can choose from, as well as links to instructional videos to show how each exercise is performed. We will seek out a partnership with RecSports to provide any additional functionality that they would like and obtain any advice that they have.</p>
+	<p>It is also possible that we seek out help from the IDEA Center on campus to maximize the potential of Irish Fitness.</p>
+	<h2>Project Usefulness</h2>
+	<p>Our target audience includes Notre Dame students and faculty interested in leading a healthy lifestyle while on campus. Similar fitness websites exist (eg. MyFitnessPal), but these apps do not work well with Campus Dining menus and limited availability of workout equipment on campus. Irish Fitness seeks to bridge the gap between Notre Dame and fitness tracking.</p>
+	<h2>Data Realness</h2>
+	<p>Our data includes meals offered throughout campus as well as exercise equipment at the various gyms. We will attempt to obtain this data through communication with Campus Dining and RecSports.</p>
+	<p>We will also have a database of users, where they can track their goals, including target weight, target macros, and exercise preference.</p>
+	<p>Users will also have the opportunity to track their meals to better understand how what they eat is affeting their health.</p>
+	<h2>Functions</h2>
+	<h3>Basic Functions</h3>
+	<p><strong>Insert</strong></p>
+	<p>Users can make accounts within Irish Fitness. Users will then be able to insert meal and workout data that they wish to save.</p>
+	<p><strong>Update</strong></p>
+	<p>Users can update their information, such as weight and goals as well as update meal and workout data previously entered.</p>
+	<p><strong>Delete</strong></p>
+	<p>Admins will have the power to delete users. Users will be able to delete any previous data entered.</p>
+	<p><strong>Search</strong></p>
+	<p>Users can search through their meal or workout data to reach what they would like to see.</p>
+	<h3>Advanced Functions</h3>
+	<p><strong>Menu Parsing:</strong> Each day, Campus Dining's menus will be parsed for meal items and, if the item is not already in the database, it will be added to the database. Then, each item being offered during the current day will be selected from the database and shown to the user.</p>
+	<p><strong>Running Route Overlay:</strong> Users will have the option to go on an outdoor run on a scripted path. The user will insert a starting point and a desired distance; Irish Fitness will then output a running route throughout campus overlayed on the campus map using the desired distance and starting point.</p>
+	<p><strong>Custom Recipe/Meal Input:</strong> Users will be able to create and save recipes to add to their meal plan for the day. They will also be able to add meals by number of calories or macros. This will allow for easier use when a user wishes to eat somewhere off campus.</p>
+	<h2>ER Diagram</h2>
+	<a href="assets/images/ERDiagram.jpeg">Link</a>
+</div>
+</body>
+</html>
