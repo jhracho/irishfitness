@@ -1,4 +1,6 @@
-<img src="assets/icons/Circle_Logo.png" alt="Irish Fitness" width="200"/>
+<p align="center">
+   <img src="assets/icons/Circle_Logo.png" alt="Irish Fitness" width="200"/>
+</p>
 
 ### Developed in Winter/Spring 2021 for CSE 30246 at Notre Dame
 #### A collaboration between [Julia Buckley](https://github.com/juliafbuckley), [Stuart Hayden](https://github.com/shayden2), [Jake Hracho](https://github.com/jhracho), and [Chris Hunt](https://github.com/chunt4)
