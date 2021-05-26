@@ -30,7 +30,7 @@
    - Update fitness goals, residence location, and other profile information
 
 ## About the Webscraper
-Irish Fitness utilizes a webscraper to retrieve nutritional data from daily dining hall menus. This runs via a cronjob at the start of every day. It is coded with Python's Selenium library and uses a headless version of Firefox.
+Irish Fitness utilizes a webscraper to retrieve nutritional data from daily dining hall menus. This runs via a cronjob at the start of every day. It is coded with Python's Selenium library and uses a headless version of Firefox. The scraper compiles the data into a .csv file for each dining hall. These .csv files are read by a PHP script that runs SQL queries to update the database for each food item. If a food is being offered, a boolean column is updated from 0 to 1. If a food is not in the database, it will be added.
 
 ## Further Development
 - Due to our webapp being hosted on a Notre Dame server, it can only be accessed from the Notre Dame network. We could spin up MySQL and Apache servers for this website to be run independently.
