@@ -29,6 +29,9 @@
 - Profile Page
    - Update fitness goals, residence location, and other profile information
 
+## About the Webscraper
+Irish Fitness utilizes a webscraper to retrieve nutritional data from daily dining hall menus. This runs via a cronjob at the start of every day. It is coded with Python's Selenium library and uses a headless version of Firefox.
+
 ## Further Development
 - Due to our webapp being hosted on a Notre Dame server, it can only be accessed from the Notre Dame network. We could spin up MySQL and Apache servers for this website to be run independently.
 - Users should be able to save their running-route drawings and view them all in one place.
